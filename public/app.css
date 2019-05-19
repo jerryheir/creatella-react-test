@@ -1,0 +1,70 @@
+.boxshadow {
+    box-shadow: 3px 3px #F2F2F2;
+    width: 200px;
+}
+
+.face {
+    background-color: yellow;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 3px 3px #F2F2F2;
+}
+
+p.small {
+    font-size: 12px;
+}
+
+p.smallest {
+    font-size: 8px;
+    text-align: right;
+}
+
+header {
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+h1 {
+    text-shadow: 3px 3px yellow;
+}
+
+img:hover {
+    box-shadow: 10px 10px 5px 5px #cccccc;
+}
+
+#ad {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.ads {
+    width: 100%;
+    display: flex;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.ads p {
+    font-size: 14px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    display: flex;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+}
+
+.select {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    align-self: center;
+}
