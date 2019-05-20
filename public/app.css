@@ -6,9 +6,10 @@
 .face {
     background-color: yellow;
     display: flex;
-    padding: 25px;
+    padding: 15px;
     align-items: center;
     justify-content: center;
+    width: 200px;
     text-shadow: 3px 3px #F2F2F2;
 }
 

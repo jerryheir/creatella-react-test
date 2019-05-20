@@ -66,20 +66,20 @@ class App extends React.Component {
   }
 
   typeWriter = (loading, loadingText) => {
-    // let { loadingText, loading } = this.state;
-    // Here is my animated "loading..."
-   if (this.state[loading] && this.state[loadingText].length < 10) {
+      // let { loadingText, loading } = this.state;
+      // Here is my animated "loading..."
+    if (this.state[loading] && this.state[loadingText].length < 10) {
       // loading... is a string with a length of 10 so if it is less than that say "loading" or "loading."
       // then it adds a dot to it after 0.2 secs
       setTimeout(()=>{
         this.setState({ [loadingText]: this.state[loadingText] + '.' })
-        return this.typeWriter(loading, loadingText) // simple recursion
+        this.typeWriter(loading, loadingText) // simple recursion
       }, 200)
     } else if (this.state[loading] && this.state[loadingText].length === 10){
       // else if is equal to loading... , then set it back to loading and use recursion Haha
       setTimeout(()=>{
         this.setState({ [loadingText]: 'loading' })
-        return this.typeWriter(loading, loadingText) // simple recursion
+        this.typeWriter(loading, loadingText) // simple recursion
       }, 200)
     }
   }
@@ -155,7 +155,7 @@ class App extends React.Component {
     // this function is what is used in the scroll event listener
     const wrappedElement = document.getElementById('row');
     if (this.isBottom(wrappedElement)) {
-      this.setState({ loader: 'loading', end: true },
+      this.setState({ loader: 'loading...', end: true },
       ()=>{
          this.typeWriter("end", "loader")
          this.runBottomFunc()
